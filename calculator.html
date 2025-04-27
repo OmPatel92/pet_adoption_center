@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Cost Calculator - Pet Adoption Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Pet Adoption Center</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pets.html">Pets</a></li>
+            <li><a href="calculator.html">Care Cost</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+        </ul>
+    </nav>
+
+    <section class="calculator">
+        <h2>Estimation of Care Cost</h2>
+        <div class="calculator-form">
+            <label for="petType">Select Pet:</label>
+            <select id="petType">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="rabbit">Rabbit</option>
+            </select>
+            <button onclick="calculateCost()">Calculate</button>
+            <div id="costResult"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Pet Adoption Center. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

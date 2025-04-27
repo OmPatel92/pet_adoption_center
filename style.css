@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: url('adoption.jpg') no-repeat center center/cover;
+    color: #333;
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    animation: slide 15s infinite;
+}
+
+.slider img:nth-child(1) { animation-delay: 0s; }
+.slider img:nth-child(2) { animation-delay: 3s; }
+.slider img:nth-child(3) { animation-delay: 6s; }
+
+@keyframes slide {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: white;
+}
+
+.about, .pets, .calculator, .adoption-form {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 30px;
+    border-radius: 18px;
+}
+
+.pets-grid {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.pet-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+.pet-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    }
+
+.pet-card:hover {
+    transform: scale(1.05);
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 18px;
+    margin-top: 50px;
+}
+
+.animate {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
